@@ -1,0 +1,2216 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "9b7bb5c2-5b52-410a-aef1-fc142a31bdee",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : { },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "Initial"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "MetaDataSet:Sample Set " : "Template metadata sample set ",
+      "Acknowledgements" : "",
+      "Business Process Level" : "",
+      "Care setting" : "",
+      "Client group" : "",
+      "Clinical Record Element" : "",
+      "Copyright" : "",
+      "Issues" : "",
+      "Owner" : "",
+      "Sign off" : "",
+      "Speciality" : "",
+      "User roles" : "",
+      "MD5-CAM-1.0.1" : "7cf38001577854482a4a2ba18a0a961e",
+      "PARENT:MD5-CAM-1.0.1" : "84FA661FB99D4765126B3A1EB4D9868F",
+      "original_language" : "ISO_639-1::de",
+      "sem_ver" : "2.0.1",
+      "build_uid" : "7eb311e7-0d6b-49ed-827c-f47a0816e123"
+    },
+    "details" : {
+      "de" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "de"
+        },
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "purpose" : "For å registrere et sammendrag av en enkelt, betydelig helsehendelse, med hensikt å gjøre det tilgjengelig for helsepersonell innenfor et delt helsejournalmiljø.",
+        "keywords" : [ "omsorgsepisode", "klinisk konsultasjon", "hendelse" ],
+        "use" : "Brukes for å registrere et sammendrag av en enkelt, betydelig helsehendelse eller omsorgsepisode for visning eller utveksling innenfor et delt helsejournalmiljø.",
+        "misuse" : "Brukes ikke til å registrere fullstendige og samtidige detaljer om en helsehendelse, et møte eller en omsorgsepisode i en helsetjenesteyters journal. Bruk COMPOSITION.encounter (og spesialiseringer) for dette formålet.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "pt-br" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "pt-br"
+        },
+        "purpose" : "*To record a summary of a single, significant healthcare event, with the intent of being made available to multiple providers within a shared health record environment. (en)",
+        "keywords" : [ "evento", "encontro", "episódio" ],
+        "use" : "Usado para registrar um únivo evento ou episódio significativo no cuidado à saúde para visualização ou troca dentro de um ambiente de compartilhamento de registros de saúde.",
+        "misuse" : "Não deve ser usado para registrar detalhes completos e contemporâneos de um evento em saúde, encontro ou episódio de cuidado dentro do registro de cuidado do profissional de saúde. Use COMPOSITION.encounter ( e especializações) para este propósito.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "purpose" : "To record a summary of a single, significant healthcare event, with the intent of being made available to multiple providers within a shared health record environment.",
+        "keywords" : [ "event", "encounter", "episode" ],
+        "use" : "Use to record a summary of a single, significant healthcare event or episode of care for viewing or exchange within a shared health record environment.",
+        "misuse" : "Not to be used to record the complete and contemporaneous details of a healthcare event, encounter or episode of care within a care provider's health record. Use COMPOSITION.encounter (and specialisations) for this purpose.",
+        "copyright" : "© openEHR Foundation",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-COMPOSITION.event_summary.v0",
+  "differential" : true,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-COMPOSITION.t_event_summary.v0"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "COMPOSITION",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "context",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "EVENT_CONTEXT",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "other_context",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ITEM_TREE",
+            "nodeId" : "at0001",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "items",
+              "children" : [ {
+                "@type" : "C_ARCHETYPE_ROOT",
+                "rmTypeName" : "CLUSTER",
+                "occurrences" : "1..1",
+                "nodeId" : "at0002.1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ],
+                "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-case_identification-000.v0",
+                "referenceType" : "archetypeOverlay"
+              }, {
+                "@type" : "C_ARCHETYPE_ROOT",
+                "rmTypeName" : "CLUSTER",
+                "occurrences" : "0..1",
+                "nodeId" : "at0002.2",
+                "attributes" : [ ],
+                "attributeTuples" : [ ],
+                "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-case_identification-001.v0",
+                "referenceType" : "archetypeOverlay"
+              }, {
+                "@type" : "C_ARCHETYPE_ROOT",
+                "rmTypeName" : "CLUSTER",
+                "occurrences" : "0..1",
+                "nodeId" : "at0002.3",
+                "attributes" : [ ],
+                "attributeTuples" : [ ],
+                "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-case_identification-002.v0",
+                "referenceType" : "archetypeOverlay"
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "content",
+      "existence" : "0..1",
+      "children" : [ {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "ADMIN_ENTRY",
+        "occurrences" : "1..1",
+        "nodeId" : "at0.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-ADMIN_ENTRY.ovl-hospitalization-003.v0",
+        "referenceType" : "archetypeOverlay"
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Patientenaufenthalt",
+          "description" : "Summary record of a single, significant healthcare event, encounter or episode."
+        }
+      },
+      "de" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Patientenaufenthalt",
+          "description" : "Zusammenfassung eines einzelnen, wesentlichen Vorgangs im Gesundheitswesen, eines Kontakts oder einer Behandlungsepisode."
+        }
+      },
+      "pt-br" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Patientenaufenthalt",
+          "description" : "Registro de sumário de um evento, encontro ou episódio significativo no cuidado em saúde."
+        }
+      },
+      "nb" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Patientenaufenthalt",
+          "description" : "Sammendrag av en enkelt, betydelig helsehendelse, konsultasjon eller omsorgsepisode."
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "d68664cf-5b32-3028-b98d-de06008f94aa",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "Patientenaufenthalt",
+  "otherMetaData" : { },
+  "templateOverlays" : [ {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "b5bfd7b0-eb33-4b1a-86a4-eedd5b44e41a",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "D94F932D76D2D0389D242063ED336124"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.case_identification.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-case_identification-000.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "1..1",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0004", "at0005" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Versorgungsfall",
+            "description" : "To record case identification details for public health purposes."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Zugehöriger Versorgungsfall (Kennung)",
+            "description" : "The identifier of this case."
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Versorgungsfall",
+            "description" : "For registrering av case identifikasjons detaljer for offentlige helseformål."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Zugehöriger Versorgungsfall (Kennung)",
+            "description" : "Case Identifikatoren.i"
+          }
+        },
+        "ar-sy" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Versorgungsfall",
+            "description" : "لتسجيل تفاصيل تعريف الحالة لأغراض الصحة العامة"
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Zugehöriger Versorgungsfall (Kennung)",
+            "description" : "العنصر التعريفي الخاص بهذه الإصابة المَرَضية"
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Versorgungsfall",
+            "description" : "Zur Erfassung von Details zur Identifikation eines Falls im Gesundheitswesen."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Zugehöriger Versorgungsfall (Kennung)",
+            "description" : "Der Bezeichner/die Kennung dieses Falls."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "76b9367d-f26d-4d22-a79d-d02cffa0dda5",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Michael Lieser",
+        "organisation" : "University of Heidelberg, Department of Infectious Diseases",
+        "email" : "michael.lieser@med.uni-heidelberg.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Lars Bitsch-Larsen",
+        "organisation" : "Haukeland University Hospital of Bergen, Norway"
+      },
+      "accreditation" : "MD, DEAA, MBA, spec in anesthesia, spec in tropical medicine.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "b5bfd7b0-eb33-4b1a-86a4-eedd5b44e41a",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "D94F932D76D2D0389D242063ED336124"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.case_identification.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-case_identification-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "1..1",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0004", "at0005" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Abteilungsfall",
+            "description" : "To record case identification details for public health purposes."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Zugehöriger Abteilungsfall (Kennung)",
+            "description" : "The identifier of this case."
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Abteilungsfall",
+            "description" : "For registrering av case identifikasjons detaljer for offentlige helseformål."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Zugehöriger Abteilungsfall (Kennung)",
+            "description" : "Case Identifikatoren.i"
+          }
+        },
+        "ar-sy" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Abteilungsfall",
+            "description" : "لتسجيل تفاصيل تعريف الحالة لأغراض الصحة العامة"
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Zugehöriger Abteilungsfall (Kennung)",
+            "description" : "العنصر التعريفي الخاص بهذه الإصابة المَرَضية"
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Abteilungsfall",
+            "description" : "Zur Erfassung von Details zur Identifikation eines Falls im Gesundheitswesen."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Zugehöriger Abteilungsfall (Kennung)",
+            "description" : "Der Bezeichner/die Kennung dieses Falls."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "76b9367d-f26d-4d22-a79d-d02cffa0dda5",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Michael Lieser",
+        "organisation" : "University of Heidelberg, Department of Infectious Diseases",
+        "email" : "michael.lieser@med.uni-heidelberg.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Lars Bitsch-Larsen",
+        "organisation" : "Haukeland University Hospital of Bergen, Norway"
+      },
+      "accreditation" : "MD, DEAA, MBA, spec in anesthesia, spec in tropical medicine.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "b5bfd7b0-eb33-4b1a-86a4-eedd5b44e41a",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "D94F932D76D2D0389D242063ED336124"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.case_identification.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-case_identification-002.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "1..1",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0004", "at0005" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Versorgungstellenkontakt",
+            "description" : "To record case identification details for public health purposes."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Zugehöriger Versorgungsstellenkontakt (Kennung)",
+            "description" : "The identifier of this case."
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Versorgungstellenkontakt",
+            "description" : "For registrering av case identifikasjons detaljer for offentlige helseformål."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Zugehöriger Versorgungsstellenkontakt (Kennung)",
+            "description" : "Case Identifikatoren.i"
+          }
+        },
+        "ar-sy" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Versorgungstellenkontakt",
+            "description" : "لتسجيل تفاصيل تعريف الحالة لأغراض الصحة العامة"
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Zugehöriger Versorgungsstellenkontakt (Kennung)",
+            "description" : "العنصر التعريفي الخاص بهذه الإصابة المَرَضية"
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Versorgungstellenkontakt",
+            "description" : "Zur Erfassung von Details zur Identifikation eines Falls im Gesundheitswesen."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Zugehöriger Versorgungsstellenkontakt (Kennung)",
+            "description" : "Der Bezeichner/die Kennung dieses Falls."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "76b9367d-f26d-4d22-a79d-d02cffa0dda5",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Michael Lieser",
+        "organisation" : "University of Heidelberg, Department of Infectious Diseases",
+        "email" : "michael.lieser@med.uni-heidelberg.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Lars Bitsch-Larsen",
+        "organisation" : "Haukeland University Hospital of Bergen, Norway"
+      },
+      "accreditation" : "MD, DEAA, MBA, spec in anesthesia, spec in tropical medicine.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "3b477495-c605-49b5-82e9-1ddad37b4e4b",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "4EA959CABC892EC9D75CFEFFA69A2BC1"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-ADMIN_ENTRY.hospitalization.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-ADMIN_ENTRY.ovl-hospitalization-003.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "ADMIN_ENTRY",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0003.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "CODE_PHRASE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "at0010", "at0011", "at0012" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
+              "nodeId" : "at0004.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "1..1",
+              "nodeId" : "at0008.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-location-004.v1",
+              "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "1..*",
+              "nodeId" : "at0013.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-organization-006.v0",
+              "referenceType" : "archetypeOverlay"
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Versorgungsaufenthalt",
+            "description" : "Zur Erfassung der administrativen Aufenthaltsdaten eines Patienten. "
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "fd05cbb6-df58-40bb-b3dc-0b40eaf4eb51",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "de"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "6d5616fe-7f15-4bfb-a0d2-3e3d3b9a83a5",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "3FBD58B31B73C316C3052541F6BA58C0"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.location.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-location-004.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0034.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "CLUSTER",
+          "occurrences" : "0..1",
+          "nodeId" : "at0047.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-device-005.v1",
+          "referenceType" : "archetypeOverlay"
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0034.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0034.1",
+            "text" : "Bettplatz",
+            "description" : "Used to document information about the bed space e.g. bed was placed next to the window or next to the door."
+          }
+        },
+        "de" : {
+          "at0034.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0034.1",
+            "text" : "Bettplatz",
+            "description" : "Beschreibung des Bettstellplatzes z.B. Bett stand neben dem Fenster oder neben der Tür."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "25c689a9-fe64-40f3-95c7-9198d02e40c0",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sarah Ballout",
+        "organisation" : "MHH-Hannover",
+        "email" : "ballout.sarah@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "dbd6f4b3-a3e6-41b1-a21e-3530ac1ca212",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "D1349AAD9444365B34B1BAFDE9F0BD4A"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.device.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-device-005.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "1..1",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "existence" : "0..1",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "constraint" : [ "Bett" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0005.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0020.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0022.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0023.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0025.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0007.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0024.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0008.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "ar-sy" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Details zum Bett",
+            "description" : "*An instrument, apparatus, implant, material or similar, used in the provision of healthcare. In this context, a medical device includes a broad range of devices which act through a variety of physical, mechanical, thermal or similar means but specifically excludes devices which act through medicinal means such as pharmacological, metabolic or immunological methods.  The scope is inclusive of disposable devices as well as durable or persisting devices that require tracking, maintenance activities or regular calibration, recognising that each type of device has specific data recording requirements.(en)"
+          }
+        },
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Details zum Bett",
+            "description" : "An instrument, apparatus, implant, material or similar, used in the provision of healthcare. In this context, a medical device includes a broad range of devices which act through a variety of physical, mechanical, thermal or similar means but specifically excludes devices which act through medicinal means such as pharmacological, metabolic or immunological methods.  The scope is inclusive of disposable devices as well as durable or persisting devices that require tracking, maintenance activities or regular calibration, recognising that each type of device has specific data recording requirements."
+          }
+        },
+        "es-ar" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Details zum Bett",
+            "description" : "*An instrument, apparatus, implant, material or similar, used in the provision of healthcare. In this context, a medical device includes a broad range of devices which act through a variety of physical, mechanical, thermal or similar means but specifically excludes devices which act through medicinal means such as pharmacological, metabolic or immunological methods.  The scope is inclusive of disposable devices as well as durable or persisting devices that require tracking, maintenance activities or regular calibration, recognising that each type of device has specific data recording requirements.(en)"
+          }
+        },
+        "pt-br" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Details zum Bett",
+            "description" : "Um instrumento, aparelho, implante, material ou similares para a prestação de cuidados de saúde . Neste contexto, um dispositivo médico inclui uma ampla variedade de dispositivos que atuem através de uma variedade de meios físicos, mecânicos , térmicos ou semelhantes, mas exclui especificamente os dispositivos que atuem através de meios farmacológicos tais como medicamentos, metabólicos ou métodos imunológicos. O escopo é inclusive de dispositivos descartáveis​​, bem como dispositivos duráveis ​​ou permanentes que requerem seguimento, atividades de manutenção ou calibração regular, reconhecendo que cada tipo de dispositivo tem requisitos de registro de dados específicos."
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Details zum Bett",
+            "description" : "Et instrument, apparat, implantat, materiale, programvare eller lignende som er benyttet i utførelsen av helsetjenester. I denne konteksten er medisinsk utstyr et bredt spekter utstyr med fysiske, mekaniske, termiske, programvaremessige eller tilsvarende virkemåter. Utstyr som har en farmakologisk, metabolsk eller immunologisk virkning ekskluderes spesifikt. \r\n\r\nArketypen tar høyde for registrering av engangsutstyr samt varig utstyr som krever sporing, vedlikehold eller jevnlig kalibrering, og tar høyde for at hvert enkelt medisinsk utstyr har spesifikke behov for dataregistrering."
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Details zum Bett",
+            "description" : "Ein Instrument, ein Gerät, ein Implantat, ein Material oder ähnliches, das für die Bereitstellung von Gesundheitsleistungen verwendet wird. In diesem Zusammenhang umfasst ein medizinisches Gerät eine breite Palette von Geräten, die auf verschiedene physikalische, mechanische, thermische oder ähnliche Weise wirken, schließt jedoch insbesondere Geräte aus, die auf medizinischem Wege wirken, wie zum Beispiel pharmakologische, metabolische oder immunologische Methoden. Der Geltungsbereich umfasst\r\nEinweggeräte sowie langlebige oder dauerhafte Geräte, die nachverfolgt,\r\ngewartet oder regelmäßig kalibriert werden müssen, wobei zu berücksichtigen ist, dass für jeden Gerätetyp bestimmte Datenaufzeichnungsanforderungen gelten."
+          }
+        },
+        "sv" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Details zum Bett",
+            "description" : "Ett instrument, en apparat, ett implantat, ett material eller liknande, som används vid tillhandahållande av hälso- och sjukvård. \r\nEn medicinteknisk produkt i detta sammanhang inkluderar produkter som verkar ex. genom en mängd olika fysiska, mekaniska eller termiska sätt. I sammanhanget exkluderas specifikt produkter som verkar med medicinska medel såsom farmakologiska, metaboliska eller immunologiska metoder.\r\nArketypen tar höjd för engångsprodukter och produkter med tillfällig-, kort- och långvarig användning som kräver spårning, underhållsaktiviteter eller regelbunden kalibrering. Arketypen tar också höjd för att varje typ av medicinteknisk produkt har sina egna specifika krav på registrering av uppgifter.\r\n"
+          }
+        },
+        "nl" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Details zum Bett",
+            "description" : "Een instrument, apparaat, implantaat, materiaal of dergelijke dat wordt gebruikt bij het verlenen van gezondheidszorg. In deze context omvat een medisch hulpmiddel een breed scala aan hulpmiddelen die op verschillende fysische, mechanische, thermische of soortgelijke manieren werken, maar sluit specifiek hulpmiddelen uit die op medicinale wijze werken, zoals farmacologische, metabolische of immunologische methoden. De reikwijdte omvat zowel wegwerpapparaten als duurzame of blijvende hulpmiddelen waarvoor tracking, onderhoudsactiviteiten of regelmatige kalibratie nodig zijn, waarbij wordt erkend dat elk type apparaat specifieke vereisten voor gegevensregistratie heeft."
+          }
+        },
+        "fr" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Details zum Bett",
+            "description" : "Un instrument, un appareil, un implant, un matériau ou similaire, utilisé dans la prestation de soins de santé. Dans ce contexte, un dispositif médical comprend un large éventail de dispositifs qui agissent par divers moyens physiques, mécaniques, thermiques ou similaires, mais exclut spécifiquement les dispositifs qui agissent par des moyens médicinaux tels que les méthodes pharmacologiques, métaboliques ou immunologiques. Le champ d'application comprend les dispositifs jetables ainsi que les dispositifs durables ou persistants qui nécessitent un suivi, des activités de maintenance ou un étalonnage régulier, en reconnaissant que chaque type de dispositif a des exigences spécifiques en matière d'enregistrement des données."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "fdf1b399-f40d-488c-9a16-281daae7d28c",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Anneka Sargeant",
+        "organisation" : "Institut für Medizinische Informatik - Universitätsmedizin Göttingen",
+        "email" : "anneka.sargeant@med.uni-goettingen.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Sofia Lång Janstad",
+        "organisation" : "Karolinska University hospital, Stockholm Region,",
+        "email" : "sofia.lang-janstad@regionstockholm.se"
+      },
+      "otherDetails" : {
+        "other_contributors" : "Sajjad Saffari Miandoab (Karolinska University hospital), Jörgen Kuylenstierna (openEHR Sverige), Josephine de Flon (Karolinska University hospital), Magnus Stridsman (Region Östergötland), Malin Larsson (Karolinska University hospital), Therese Högberg Mårder (Region Östergötland), Linda Rosen (Region Östergötland), Åsa Skagerhult (openEHR Sverige)"
+      }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-ar"
+      },
+      "author" : {
+        "name" : "Alan March",
+        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina",
+        "email" : "amarch@cas.austral.edu.ar"
+      },
+      "accreditation" : "MD",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "John Tore Valand",
+        "organisation" : "Helse Bergen HF"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Osmeire Chamelette Sanzovo",
+        "organisation" : "Hospital Sírio Libanês - SP",
+        "email" : "osmeire.acsanzovo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Pieter Bos, Jelte Zeilstra",
+        "organisation" : "Nedap"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "c1af6cbf-71d4-48f5-896a-2fa0f55630d9",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "D89C6BDB7361A3527154105AF319A685"
+      },
+      "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "" : {
+            "fhir" : "Organization"
+          },
+          "/items[at0051.1]" : {
+            "fhir" : "Organization.type"
+          },
+          "/items[at0050]" : {
+            "fhir" : "Organization.active"
+          },
+          "/items[at0052]" : {
+            "fhir" : "Organization.name"
+          },
+          "/items[at0024.1]" : {
+            "fhir" : "Organization.identifier"
+          },
+          "/items[at0047]" : {
+            "fhir" : "Organization.address"
+          }
+        },
+        "de" : {
+          "" : {
+            "fhir" : "Organization"
+          },
+          "/items[at0051]" : {
+            "fhir" : "Organization.type"
+          },
+          "/items[at0050]" : {
+            "fhir" : "Organization.active"
+          },
+          "/items[at0052]" : {
+            "fhir" : "Organization.name"
+          },
+          "/items[at0024]" : {
+            "fhir" : "Organization.identifier"
+          },
+          "/items[at0047]" : {
+            "fhir" : "Organization.address"
+          },
+          "/items[at0051.1]" : {
+            "fhir" : "Organization.type"
+          },
+          "/items[at0024.1]" : {
+            "fhir" : "Organization.identifier"
+          }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.organization.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-organization-006.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0051.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "existence" : "0..1",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "constraint" : [ "Healthcare Provider", "Hospital Department", "Organizational team", "Government", "Insurance Company", "Payer", "Educational Institute", "Religious Institution", "Clinical Research Sponsor", "Community Group", "Non-Healthcare Business or Corporation", "Other", "/.+/" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0024.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "0..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "existence" : "0..1",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "terminologyId" : {
+                    "value" : "BPflV 31.12.2003"
+                  },
+                  "constraint" : [ ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0100",
+                    "value" : "Innere Medizin"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0200",
+                    "value" : "Geriatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0300",
+                    "value" : "Kardiologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0400",
+                    "value" : "Nephrologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0500",
+                    "value" : "Hämatologie und internistische Onkologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0600",
+                    "value" : "Endokrinologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0700",
+                    "value" : "Gastroenterologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0800",
+                    "value" : "Pneumologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0900",
+                    "value" : "Rheumatologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1000",
+                    "value" : "Pädiatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1100",
+                    "value" : "Kinderkardiologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1200",
+                    "value" : "Neonatologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1300",
+                    "value" : "Kinderchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1400",
+                    "value" : "Lungen- und Bronchialheilkunde"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1500",
+                    "value" : "Allgemeine Chirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1600",
+                    "value" : "Unfallchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1700",
+                    "value" : "Neurochirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1800",
+                    "value" : "Gefäßchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1900",
+                    "value" : "Plastische Chirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2000",
+                    "value" : "Thoraxchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2100",
+                    "value" : "Herzchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2200",
+                    "value" : "Urologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2300",
+                    "value" : "Orthopädie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2400",
+                    "value" : "Frauenheilkunde und Geburtshilfe"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2500",
+                    "value" : "davon Geburtshilfe"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2600",
+                    "value" : "Hals-, Nasen-, Ohrenheilkunde"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2700",
+                    "value" : "Augenheilkunde"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2800",
+                    "value" : "Neurologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2900",
+                    "value" : "Allgemeine Psychiatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3000",
+                    "value" : "Kinder- und Jugendpsychiatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3100",
+                    "value" : "Psychosomatik/Psychotherapie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3200",
+                    "value" : "Nuklearmedizin"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3300",
+                    "value" : "Strahlenheilkunde"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3400",
+                    "value" : "Dermatologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3500",
+                    "value" : "Zahn- und Kieferheilkunde, Mund- und Kieferchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3600",
+                    "value" : "Intensivmedizin"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2316",
+                    "value" : "Orthopädie und Unfallchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2425",
+                    "value" : "Frauenheilkunde"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3700",
+                    "value" : "Sonstige Fachabteilung"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0102",
+                    "value" : "Innere Medizin/Schwerpunkt Geriatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0103",
+                    "value" : "Innere Medizin/Schwerpunkt Kardiologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0104",
+                    "value" : "Innere Medizin/Schwerpunkt Nephrologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0105",
+                    "value" : "Innere Medizin/Schwerpunkt Hämatologie und internistische Onkologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0106",
+                    "value" : "Innere Medizin/Schwerpunkt Endokrinologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0107",
+                    "value" : "Innere Medizin/Schwerpunkt Gastroenterologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0108",
+                    "value" : "Innere Medizin/Schwerpunkt Pneumologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0109",
+                    "value" : "Innere Medizin/Schwerpunkt Rheumatologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0114",
+                    "value" : "Innere Medizin/Schwerpunkt Lungen- und Bronchialheilkunde"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0150",
+                    "value" : "Innere Medizin/Tumorforschung"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0151",
+                    "value" : "Innere Medizin/Schwerpunkt Coloproktologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0152",
+                    "value" : "Innere Medizin/Schwerpunkt Infektionskrankheiten"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0153",
+                    "value" : "Innere Medizin/Schwerpunkt Diabetes"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0154",
+                    "value" : "Innere Medizin/Schwerpunkt Naturheilkunde"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0156",
+                    "value" : "Innere Medizin/Schwerpunkt Schlaganfallpatienten"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0224",
+                    "value" : "Geriatrie/Schwerpunkt Frauenheilkunde"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0260",
+                    "value" : "Geriatrie/Tagesklinik (für teilstationäre Pflegesätze)"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0261",
+                    "value" : "Geriatrie/Nachtklinik (für teilstationäre Pflegesätze)"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0410",
+                    "value" : "Nephrologie/Schwerpunkt Pädiatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0436",
+                    "value" : "Nephrologie/Intensivmedizin"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0510",
+                    "value" : "Hämatologie und internistische Onkologie/Schwerpunkt Pädiatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0524",
+                    "value" : "Hämatologie und internistische Onkologie/Schwerpunkt Frauenheilkunde"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0533",
+                    "value" : "Hämatologie und internistische Onkologie/Schwerpunkt Strahlenheilkunde"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0607",
+                    "value" : "Endokrinologie/Schwerpunkt Gastroenterologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0610",
+                    "value" : "Endokrinologie/Schwerpunkt Pädiatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0706",
+                    "value" : "Gastroenterologie/Schwerpunkt Endokrinologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0710",
+                    "value" : "Gastroenterologie/Schwerpunkt Pädiatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "0910",
+                    "value" : "Rheumatologie/Schwerpunkt Pädiatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1004",
+                    "value" : "Pädiatrie/Schwerpunkt Nephrologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1005",
+                    "value" : "Pädiatrie/Schwerpunkt Hämatologie und internistische Onkologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1006",
+                    "value" : "Pädiatrie/Schwerpunkt Endokrinologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1007",
+                    "value" : "Pädiatrie/Schwerpunkt Gastroenterologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1009",
+                    "value" : "Pädiatrie/Schwerpunkt Rheumatologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1011",
+                    "value" : "Pädiatrie/Schwerpunkt Kinderkardiologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1012",
+                    "value" : "Pädiatrie/Schwerpunkt Neonatologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1014",
+                    "value" : "Pädiatrie/Schwerpunkt Lungen- und Bronchialheilkunde"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1028",
+                    "value" : "Pädiatrie/Schwerpunkt Kinderneurologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1050",
+                    "value" : "Pädiatrie/Schwerpunkt Perinatalmedizin"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1051",
+                    "value" : "Langzeitbereich Kinder"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1136",
+                    "value" : "Kinderkardiologie/Schwerpunkt Intensivmedizin"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1410",
+                    "value" : "Lungen- und Bronchialheilkunde/Schwerpunkt Pädiatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1513",
+                    "value" : "Allgemeine Chirurgie/Schwerpunkt Kinderchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1516",
+                    "value" : "Allgemeine Chirurgie/Schwerpunkt Unfallchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1518",
+                    "value" : "Allgemeine Chirurgie/Schwerpunkt Gefäßchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1519",
+                    "value" : "Allgemeine Chirurgie/Schwerpunkt Plastische Chirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1520",
+                    "value" : "Allgemeine Chirurgie/Schwerpunkt Thoraxchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1523",
+                    "value" : "Chirurgie/Schwerpunkt Orthopädie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1536",
+                    "value" : "Allgemeine Chirurgie/Intensivmedizin (§ 13 Abs. 2 Satz 3, 2. Halbs. BPflV in der am 31.12.2003 geltenden Fassung)"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1550",
+                    "value" : "Allgemeine Chirurgie/Schwerpunkt Abdominal- und Gefäßchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "1551",
+                    "value" : "Allgemeine Chirurgie/Schwerpunkt Handchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2021",
+                    "value" : "Thoraxchirurgie/Schwerpunkt Herzchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2036",
+                    "value" : "Thoraxchirurgie/Intensivmedizin"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2050",
+                    "value" : "Thoraxchirurgie/Schwerpunkt Herzchirurgie Intensivmedizin"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2118",
+                    "value" : "Herzchirurgie/Schwerpunkt Gefäßchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2120",
+                    "value" : "Herzchirurgie/Schwerpunkt Thoraxchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2136",
+                    "value" : "Herzchirurgie/Intensivmedizin (§ 13 Abs. 2 Satz 3 2. Halbsatz BPflV in der am 31.12.2003 geltenden Fassung)"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2150",
+                    "value" : "Herzchirurgie/Schwerpunkt Thoraxchirurgie Intensivmedizin"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2309",
+                    "value" : "Orthopädie/Schwerpunkt Rheumatologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2315",
+                    "value" : "Orthopädie/Schwerpunkt Chirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2402",
+                    "value" : "Frauenheilkunde/Schwerpunkt Geriatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2405",
+                    "value" : "Frauenheilkunde/Schwerpunkt Hämatologie und internistische Onkologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2406",
+                    "value" : "Frauenheilkunde/Schwerpunkt Endokrinologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2810",
+                    "value" : "Neurologie/Schwerpunkt Pädiatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2851",
+                    "value" : "Neurologie/Schwerpunkt Gerontologie Nh"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2856",
+                    "value" : "Neurologie/Schwerpunkt Schlaganfallpatienten"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2928",
+                    "value" : "Allgemeine Psychiatrie/Schwerpunkt Neurologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2930",
+                    "value" : "Allgemeine Psychiatrie/Schwerpunkt Kinder- und Jugendpsychiatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2931",
+                    "value" : "Allgemeine Psychiatrie/Schwerpunkt Psychosomatik/Psychotherapie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2950",
+                    "value" : "Allgemeine Psychiatrie/Schwerpunkt Suchtbehandlung"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2951",
+                    "value" : "Allgemeine Psychiatrie/Schwerpunkt Gerontopsychiatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2952",
+                    "value" : "Allgemeine Psychiatrie/Schwerpunkt Forensische Behandlung"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2953",
+                    "value" : "Allgemeine Psychiatrie/Schwerpunkt Suchtbehandlung, Tagesklinik"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2954",
+                    "value" : "Allgemeine Psychiatrie/Schwerpunkt Suchtbehandlung, Nachtklinik"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2955",
+                    "value" : "Allgemeine Psychiatrie/Schwerpunkt Gerontopsychiatrie, Tagesklinik"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2956",
+                    "value" : "Allgemeine Psychiatrie/Schwerpunkt Gerontopsychiatrie, Nachtklinik"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2960",
+                    "value" : "Allgemeine Psychiatrie/Tagesklinik (für teilstationäre Pflegesätze)"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "2961",
+                    "value" : "Allgemeine Psychiatrie/Nachtklinik (für teilstationäre Pflegesätze)"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3060",
+                    "value" : "Kinder- und Jugendpsychiatrie/Tagesklinik (für teilstationäre Pflegesätze)"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3061",
+                    "value" : "Kinder- und Jugendpsychiatrie/Nachtklinik (für teilstationäre Pflegesätze)"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3110",
+                    "value" : "Psychosomatik/Psychotherapie/Schwerpunkt Kinder- und Jugendpsychosomatik"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3160",
+                    "value" : "Psychosomatik/Psychotherapie/Tagesklinik (für teilstationäre Pflegesätze)"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3161",
+                    "value" : "Psychosomatik/Psychotherapie/Nachtklinik (für teilstationäre Pflegesätze)"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3233",
+                    "value" : "Nuklearmedizin/Schwerpunkt Strahlenheilkunde"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3305",
+                    "value" : "Strahlenheilkunde/Schwerpunkt Hämatologie und internistische Onkologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3350",
+                    "value" : "Strahlenheilkunde/Schwerpunkt Radiologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3460",
+                    "value" : "Dermatologie/Tagesklinik (für teilstationäre Pflegesätze)"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3601",
+                    "value" : "Intensivmedizin/Schwerpunkt Innere Medizin"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3603",
+                    "value" : "Intensivmedizin/Schwerpunkt Kardiologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3610",
+                    "value" : "Intensivmedizin/Schwerpunkt Pädiatrie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3617",
+                    "value" : "Intensivmedizin/Schwerpunkt Neurochirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3618",
+                    "value" : "Intensivmedizin/Schwerpunkt Chirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3621",
+                    "value" : "Intensivmedizin/Herzchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3622",
+                    "value" : "Intensivmedizin/Schwerpunkt Urologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3624",
+                    "value" : "Intensivmedizin/Schwerpunkt Frauenheilkunde und Geburtshilfe"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3626",
+                    "value" : "Intensivmedizin/Schwerpunkt Hals-, Nasen-, Ohrenheilkunde"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3628",
+                    "value" : "Intensivmedizin/Schwerpunkt Neurologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3650",
+                    "value" : "Operative Intensivmedizin/Schwerpunkt Chirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3651",
+                    "value" : "Intensivmedizin/Thorax-Herzchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3652",
+                    "value" : "Intensivmedizin/Herz-Thoraxchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3750",
+                    "value" : "Angiologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3751",
+                    "value" : "Radiologie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3752",
+                    "value" : "Palliativmedizin"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3753",
+                    "value" : "Schmerztherapie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3754",
+                    "value" : "Heiltherapeutische Abteilung"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3755",
+                    "value" : "Wirbelsäulenchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3756",
+                    "value" : "Suchtmedizin"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3757",
+                    "value" : "Visceralchirurgie"
+                  }, {
+                    "terminologyId" : "BPflV 31.12.2003",
+                    "code" : "3758",
+                    "value" : "Weaningeinheit"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Fachliche Organisationseinheit",
+            "description" : "Location includes both casual locations (a place used for health care without prior designation or authorisation) and dedicated, formally designated locations. The sites can be private, public, mobile or fixed."
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024.1",
+            "text" : "Fachabteilungsschlüssel",
+            "description" : "A group of buildings or other locations such as a site or campus. For example: Campus that is outside the facility, but belongs to the hospital, university."
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Fachliche Organisationseinheit",
+            "description" : "Eine fachliche Einheit, Organisation, Abteilung, Zusammenschluss, Gruppierung mit einem gemeinsamen Ziel.",
+            "fhir" : "Organization"
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024.1",
+            "text" : "Fachabteilungsschlüssel",
+            "description" : "Eindeutiger Identifikator der Organisationseinheit.",
+            "fhir" : "Organization.identifier"
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "1c83fe3f-74ff-4978-b554-27c52725b889",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sarah Ballout",
+        "organisation" : "MHH-Hannover",
+        "email" : "ballout.sarah@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    } ]
+  } ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "de"
+    },
+    "author" : {
+      "name" : "Michael Lieser",
+      "organisation" : "University of Heidelberg, Department of Infectious Diseases",
+      "email" : "michael.lieser@med.uni-heidelberg.de"
+    },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "author" : {
+      "name" : "Liv Laugen",
+      "organisation" : "​Oslo University Hospital, Norway",
+      "email" : "liv.laugen@ous-hf.no"
+    },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "pt-br"
+    },
+    "author" : {
+      "name" : "Débora Farage, Fernanda Maia, Adriana Kitajima, Ana Paula Andrade, Clóvis Puttini",
+      "organisation" : "Core Consulting",
+      "email" : "contato@coreconsulting.com.br"
+    },
+    "accreditation" : "Hospital Alemão Oswaldo Cruz",
+    "otherDetails" : { }
+  } ]
+}
