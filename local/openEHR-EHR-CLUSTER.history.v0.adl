@@ -23,8 +23,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"cd4971edc02b08af8b3a00c9f76a8b22">
 		["build_uid"] = <"08e79418-d030-37bb-88e3-cdd3b0d24df7">
-		["MD5-CAM-1.0.1"] = <"fcafe648d9d658348bd731e3770400b4">
 	>
 
 definition
@@ -75,11 +75,11 @@ ontology
 				>
 				["at0001"] = <
 					text = <"type">
-					description = <"">
+					description = <"Type of the event or data whos changes are captures via this cluster">
 				>
 				["at0002"] = <
 					text = <"events">
-					description = <"">
+					description = <"List of events ">
 				>
 				["at0004"] = <
 					text = <"event">
